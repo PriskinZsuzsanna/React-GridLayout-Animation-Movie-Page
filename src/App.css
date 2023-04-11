@@ -13,6 +13,26 @@ h1 {
 
 .filter-container {
   padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-container button {
+  min-width: 6rem;
+  padding: 0.5rem 1rem;
+  border: 3px solid #4162a8;
+  background: transparent;
+  border-radius: 1rem;
+  color: #4162a8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.active {
+  background: #4162a8;
+  color: #fff;
 }
 
 .popular-movies {
@@ -83,24 +103,22 @@ h2 {
   height: 40px;
 }
 
-.filter-container button {
-  margin-right: 2rem;
-  margin-bottom: 1rem;
-  min-width: 5rem;
-  padding: 0.5rem 1rem;
-  border: 3px solid #4162a8;
-  background: transparent;
-  border-radius: 1rem;
-  color: #4162a8;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button.active {
-  background: #4162a8;
-  color: #fff;
-}
-
 .overflow-hidden {
   overflow: hidden;
+}
+
+@media screen and (max-width: 450px){
+
+  .filter-container {
+    padding-block: 1.2rem .7rem;
+  }
+
+  .filter-container button {
+    min-width: 4rem;
+    padding: 0.5rem .7rem;
+  }
+
+  .popular-movies {
+    grid-row-gap: .7rem;
+  }
 }

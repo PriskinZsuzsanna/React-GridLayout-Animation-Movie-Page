@@ -27,24 +27,32 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Popular Movies</h1>
-      <div className="container">
-      <Filter popular={popular} setFiltered={setFiltered} activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
-      <motion.div Layout
-        className="popular-movies">
+      <motion.h1
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >Popular Movies</motion.h1>
+      <motion.div
+       initial={{ x: -100, opacity: 0 }}
+       animate={{ x: 0, opacity: 1 }}
+       transition={{ duration: 0.5, delay: 0.3 }}
+      className="container">
+        <Filter popular={popular} setFiltered={setFiltered} activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
+        <motion.div Layout
+          className="popular-movies">
           <AnimatePresence>
-          {filtered.map((movie) => {
-            return <Movie 
-            key={movie.id} 
-            title={movie.title} 
-            img={movie.backdrop_path}
-            release={movie.release_date}
-            overview={movie.overview}
-            vote={movie.vote_average} />
-          })}
+            {filtered.map((movie) => {
+              return <Movie
+                key={movie.id}
+                title={movie.title}
+                img={movie.backdrop_path}
+                release={movie.release_date}
+                overview={movie.overview}
+                vote={movie.vote_average} />
+            })}
           </AnimatePresence>
+        </motion.div>
       </motion.div>
-      </div>
     </div>
   );
 }
