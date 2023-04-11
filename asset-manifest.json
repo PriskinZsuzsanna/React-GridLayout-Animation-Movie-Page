@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-GridLayout-Animation-Movie-Page/static/css/main.c263da8a.css",
+    "main.js": "/React-GridLayout-Animation-Movie-Page/static/js/main.a64c343a.js",
+    "index.html": "/React-GridLayout-Animation-Movie-Page/index.html",
+    "main.c263da8a.css.map": "/React-GridLayout-Animation-Movie-Page/static/css/main.c263da8a.css.map",
+    "main.a64c343a.js.map": "/React-GridLayout-Animation-Movie-Page/static/js/main.a64c343a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c263da8a.css",
+    "static/js/main.a64c343a.js"
+  ]
+}
